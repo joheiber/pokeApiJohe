@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    width: 100%;
+}
+#logoPokemon{
+    width: 18%;
+    margin: 0px 5px ;
+}
+#barraBusqueda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+#barraBusqueda > div{
+    margin-left: 5px;
+    
+}
+#barraBusqueda > form{
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+#inputBusqueda{
+    border-radius: 15px;
+    height: 50%;
+}
+
