@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 :root {
     --clr-black: #1c1c1c;
     --clr-gray: #ececec;
@@ -22,11 +23,24 @@
     --type-steel: #B8B8D0;
     --type-fairy: #F0B6BC;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--clr-black);
+    font-family: 'Rubik', sans-serif;
+}
+
 body{
     margin: 0%;
     padding: 0%;
 }
-header{
+header {
+    padding-block: 1rem;
+    box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .5);
+}
+#div-header{
     display: flex;
     width: 100%;
 }
@@ -56,13 +70,14 @@ header{
 
 #todosPokemon{
     display: grid; 
-    grid-template-columns:1fr;
+    grid-template-columns:1fr 1fr 1fr;
     gap: 1rem;
 }
 
+
 main{
     max-width: 1000px;
-    padding: 0rem 1rem;
+    padding: 1rem;
     margin: 0 auto;
 }
 
@@ -70,6 +85,66 @@ main{
     width: 100%;
     max-width: 6rem;
 }
+.pokemonImg{
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.pokemonInfo{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-inline: 1rem;
+    align-items: center;
+}
+.cardPokemon{
+    border-radius: 1rem;
+    background-color: var(--clr-white);
+    text-transform: capitalize;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    box-shadow: 0px 0px 3rem -1rem rgba(0, 0, 0, .25);
+    padding-block: 1rem;
+}
+
+.pokemonIdBack{
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translatex(-50%);
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--clr-gray);
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .normal {
     background-color: var(--type-normal);
     color: var(--clr-black);
