@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
 :root {
     --clr-black: #1c1c1c;
     --clr-gray: #ececec;
@@ -32,72 +33,83 @@
     font-family: 'Rubik', sans-serif;
 }
 
-body{
+body {
     margin: 0%;
     padding: 0%;
 }
+
 header {
     padding-block: 1rem;
     box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .5);
 }
-#div-header{
+
+#div-header {
     display: flex;
     width: 100%;
 }
-#logoPokemon{
+
+#logoPokemon {
     width: 18%;
-    margin: 0px 5px ;
+    margin: 0px 5px;
 }
-#barraBusqueda{
+
+#barraBusqueda {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px;
 }
-#barraBusqueda > div{
+
+#barraBusqueda>div {
     margin-left: 5px;
-    
+
 }
-#barraBusqueda > form{
+
+#barraBusqueda>form {
     height: 50%;
     display: flex;
     align-items: center;
 }
-#inputBusqueda{
+
+#inputBusqueda {
     border-radius: 15px;
     height: 50%;
 }
 
-#todosPokemon{
-    display: grid; 
-    grid-template-columns:1fr 1fr 1fr;
+#todosPokemon {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
 }
 
 
-main{
+main {
     max-width: 1000px;
     padding: 1rem;
     margin: 0 auto;
 }
 
-.pokemonImg img{
+.pokemonImg img {
     width: 100%;
     max-width: 6rem;
 }
-.pokemonImg{
+
+.pokemonImg {
     padding-inline: 1rem;
     display: flex;
     justify-content: center;
 }
-.pokemonInfo{
+
+.pokemonInfo {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     padding-inline: 1rem;
     align-items: center;
+    text-align: center;
 }
-.cardPokemon{
+
+.cardPokemon {
     border-radius: 1rem;
     background-color: var(--clr-white);
     text-transform: capitalize;
@@ -108,7 +120,7 @@ main{
     padding-block: 1rem;
 }
 
-.pokemonIdBack{
+.pokemonIdBack {
     position: absolute;
     top: 1rem;
     left: 50%;
@@ -119,6 +131,50 @@ main{
     z-index: -1;
 }
 
+.pokemonTipos {
+    display: flex;
+    gap: .5rem;
+    font-size: .75rem;
+    font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cotenedorNombre {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.idPokemon {
+    background-color: var(--clr-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.nombrePokemon {
+    font-size: 1.4rem;
+}
+
+.tipo {
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.pokemonStats {
+    display: flex;
+    gap: 1rem;
+    font-size: .81rem;
+}
+
+.stat{
+    background-color: var(--clr-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;}
 
 
 
