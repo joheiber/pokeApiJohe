@@ -1,42 +1,34 @@
 const todosPokemon = $('#listaPokemon')
 let url = "https://pokeapi.co/api/v2/pokemon/"
-
+let respuesta = []
 
 for (let i = 1; i <= 151; i++) {
-
-    fetch(url + i)
+  respuesta.push(fetch(url + i)
         .then((repuesta) => {
             if (repuesta.ok) {
                 return repuesta.json()
-                console.log(repuesta)
             } else {
                 console.log(`error:${repuesta.statusText}`)
             }
-        })
-        .then(data => mostarPokemon(data))
+        }).catch(error => console.error("Error al obtener datos:", error))
+        )
+        
 }
 
+Promise.all(respuesta).then(pokemones => {
+  const pokemonesOrdenados = pokemones.sort((a, b) => a.id - b.id);
+  pokemonesOrdenados.forEach(pokemon => mostrarPokemon(pokemon));
+});
 
-function mostarPokemon(pokemon) {
+function mostrarPokemon(pokemon) {
     let altura = pokemon.height.toString()
     let peso = pokemon.weight.toString()
+    
     let tipos = pokemon.types.map((type) => `<p class="${type.type.name} tipo">${type.type.name}</p>`);
     tipos = tipos.join('')
-    
 
-    if (altura.length <= 1) {
-        altura = "0," + altura
-    } else {
-        let antepenultimaPosicion = altura.length - 1;
-        altura = altura.slice(0, antepenultimaPosicion) + "," + altura.slice(antepenultimaPosicion);
-    }
-
-    if (peso.length <= 1) {
-        peso = "0," + altura
-    } else {
-        let antepenultimaPosicion = peso.length - 1;
-        peso = peso.slice(0, antepenultimaPosicion) + "," + peso.slice(antepenultimaPosicion);
-    }
+    altura = (pokemon.height / 10).toFixed(1);
+    peso = (pokemon.weight / 10).toFixed(1);
 
     todosPokemon.append(`
     <div class="cardPokemon">
