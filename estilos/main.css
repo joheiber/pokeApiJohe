@@ -76,9 +76,9 @@ header {
     height: 50%;
 }
 
-#todosPokemon {
+.todosPokemon {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
@@ -91,7 +91,7 @@ main {
 
 .pokemonImg img {
     width: 100%;
-    max-width: 6rem;
+    max-width: 8rem;
 }
 
 .pokemonImg {
@@ -171,15 +171,23 @@ main {
     font-size: .81rem;
 }
 
-.stat{
+.stat {
     background-color: var(--clr-gray);
     padding: .25rem .5rem;
-    border-radius: 100vmax;}
+    border-radius: 100vmax;
+}
 
+@media screen and (min-width: 470px) {
+    .todosPokemon {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
-
-
-
+@media screen and (min-width: 700px) {
+    .todosPokemon {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
 
 
